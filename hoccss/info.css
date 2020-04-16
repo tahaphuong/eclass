@@ -1,0 +1,209 @@
+.info {
+    margin-left: 5vw;
+    display: grid;
+    grid-template-rows: 5vh 25vh 60vh;
+}
+
+.students-list-title, .classes-list-title {
+    font-size: 2.5vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+}
+.students-list, .classes-list {
+    overflow-y: scroll;
+    scrollbar-width: 0; 
+    -ms-overflow-style: none;
+}
+
+.classes-list::-webkit-scrollbar {
+    width: 0; 
+}
+.this-std, .this-class {
+    height: 45px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 100;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+
+    display: flex;
+    align-items: center;
+    border: none;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    background-color: rgba(44, 71, 102, 0.5);
+}
+.std, .class {
+    cursor: pointer;
+    height: 45px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 100;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+
+    display: flex;
+    align-items: center;
+    border: none;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    background-color: transparent
+}
+
+.std span {
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.add-std {
+    display: grid;
+    grid-template-columns: 78% 20%;
+    column-gap: 2%;
+
+    height: 50px;
+}
+.add-std input {
+    color: white;
+    height: 18px;
+
+    font-weight: 100;
+    font-size: 12px;
+    border: 0.5px solid rgba(177, 177, 177, 0.397);
+}
+
+.add-std button {
+    font-size: 10px;
+    font-weight: 700;
+    background-color: transparent;
+    border: none
+}
+
+.this-class:hover, .class:hover {
+    background-color: #243B55;
+    animation: bgchange 0.4s ease;
+    -webkit-animation: bgchange 0.4s ease;
+}
+
+.this-class:active, .class:active {
+    opacity: 0.7;
+}
+
+@keyframes bgchange {
+    from {background-color: inherit;}
+    to {background-color: #243B55;}
+}
+
+@-webkit-keyframes bgchange {
+    from {background-color: inherit;}
+    to {background-color: #243B55;}
+}
+
+.class-info-title {
+    font-size: 2.5vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+
+    margin-bottom: 1vh;
+    margin-top: -2vh;
+}
+.class-info-wrapper {
+    margin-top: 4vh;
+}
+.class-info-wrapper span {
+    color: rgb(247, 230, 207);
+}
+.class-info-wrapper div {
+    font-size: 13px;
+}
+.class-info-wrapper a {
+    font-weight: 100;
+    cursor: pointer;
+    font-size: 12px;
+    padding-bottom: 2px;
+}
+.class-info-wrapper a:hover {
+    border-bottom: 0.5px solid white;
+}
+.class-info-wrapper a:active {
+    opacity: 0.3;
+}
+
+
+/* Right nav Student */
+#add-teacher span {
+    margin-top: -5px;
+}
+
+.std-info {
+    display: grid;
+    grid-template-columns: 50% 50%;;
+}
+
+.right-points {
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    #classes {
+        display: none
+    }
+    .info a {
+        display: none;
+    }
+    #classes-info, #classes-res{
+        display: block;
+    }
+    #classes-info a, #classes-res a, #log-out a {
+        font-size: 4.2vw;
+    }
+
+    #te-info, #std-info {
+        display: grid;
+        grid-template-rows: 10vw 50vw;
+        text-align: center;
+    }
+    #te-info .class-info-title, #std-info, .class-info-title {
+        text-align: center;
+    }
+
+    #link-responsive {
+        display: block;
+        font-size: 3.7vw;   
+        color: #ffffffe7;
+        margin: 10px 0;
+    }
+    #classes-res button, #classes-info button, #log-out button{
+        padding-left: 0;
+    }
+
+    /* INFO OF STUDENTS */
+    .classes-list-title {
+        padding-left: 10vw;
+        font-size: 4vw;
+    }
+    .classes-list-title, #listClass, .group-wrapper {
+        margin-top: 50px;
+    }
+    
+    #listClass button {
+        padding-left: 10vw;
+    }
+    #add-teacher, #add-teacher-error {
+        margin-left: 5vw;
+    }
+    #add-teacher-error {
+        text-align: left;
+        margin: 0
+    }
+    #add-teacher {
+        padding: 0
+    }
+}

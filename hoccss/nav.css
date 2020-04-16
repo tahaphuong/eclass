@@ -1,0 +1,133 @@
+.main {
+    height: 100vh;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29394b, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #29394b, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    color: white;
+}
+
+.hello {
+    font-size: 5vh;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hello .sign-up-title {
+    font-size: 5vh;
+    text-align: center;
+}
+.noti {
+    font-size: 2.5vh;
+    color: rgb(226, 162, 162);
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 15vw 60vw 25vw;
+}
+
+.nav {
+    text-align: right;
+    
+}
+.nav .students-list-title {
+    text-align: right;
+    height: 8.5vh;
+    margin-top: 1vh;
+}
+.nav button {
+    font-size: 2vh;
+    margin: 2vh 0;
+    padding-left: 4vh;
+    padding-right: 0;
+}
+.display-name {
+    font-size: 3vh;
+}
+.role {
+    font-size: 2vh;
+    color: rgb(180, 180, 180);
+}
+
+.display-profile {
+    margin-bottom: 5vh;
+}
+
+.nav .students-list-title {
+    text-align: right; 
+    height: 8.5vh
+}
+
+@media only screen and (max-width: 768px) {
+    .main-content {
+        display: block;
+        position: relative;
+        z-index: 0;
+    }
+    .main {
+        overflow-y: scroll;
+    }
+    .hello {
+        position: fixed;
+        z-index: 3;
+        width: 100vw;
+
+        background-color: #141e3080;
+
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+    }
+    .hello .sign-up-title {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 8.5vw;
+        padding: 8px 0;
+    }
+
+    /* NAV */
+    #nav-icon {
+        display: block;
+    }
+    
+	.nav {
+        width: 100vw;
+        height: 100vh;
+		position: fixed;
+        z-index: 5;
+
+        text-align: center;
+
+        padding-top: 10vh;
+        background-color: #141e30f3;
+    }
+    
+    .nav-icon-bar {
+        height: 2px;
+        width: 5vw;
+        background-color: white ;
+        margin: 1vw 0;
+    }
+    .left-nav-icon {
+        opacity: 0.8;
+        padding-left: 20px;
+    }
+
+    .nav .students-list-title {
+        display: none
+    }
+    
+    #display-name {
+        font-size: 7.5vw;
+    }
+
+    .role {
+        font-size: 4vw;
+    }
+}
